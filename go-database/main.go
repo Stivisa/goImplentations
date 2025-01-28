@@ -20,7 +20,6 @@ type User struct {
 	Name    string
 	Age     json.Number
 	Contact string
-	Company string
 	Address Address
 }
 
@@ -184,11 +183,11 @@ func main() {
 	}
 
 	employees := []User{
-		{"Nikola", "30", "23344333", "Company1", Address{"Belgrade", "Serbia", "11050"}},
-		{"Nemanja", "24", "23344333", "Company2", Address{"Belgrade", "Serbia", "11050"}},
-		{"Marija", "30", "23344333", "Company3", Address{"Belgrade", "Serbia", "11050"}},
-		{"Zvonko", "60", "23344333", "Company4", Address{"Belgrade", "Serbia", "11050"}},
-		{"Sanja", "55", "23344333", "Company5", Address{"Belgrade", "Serbia", "11050"}},
+		{"Nikola", "30", "11111", Address{"Belgrade", "Serbia", "11050"}},
+		{"Nemanja", "24", "22222", Address{"Belgrade", "Serbia", "11050"}},
+		{"Marija", "30", "33333", Address{"Belgrade", "Serbia", "11050"}},
+		{"Zvonko", "60", "44444", Address{"Belgrade", "Serbia", "11050"}},
+		{"Sanja", "55", "55555", Address{"Belgrade", "Serbia", "11050"}},
 	}
 
 	for _, value := range employees {
@@ -196,7 +195,6 @@ func main() {
 			Name:    value.Name,
 			Age:     value.Age,
 			Contact: value.Contact,
-			Company: value.Company,
 			Address: value.Address,
 		})
 	}
